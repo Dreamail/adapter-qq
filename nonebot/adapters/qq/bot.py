@@ -492,7 +492,7 @@ class Bot(BaseBot):
         elif isinstance(event, C2CMessageCreateEvent):
             event._reply_seq += 1
             return await self.send_to_c2c(
-                openid=event.author.id,
+                openid=event.author.user_openid,
                 message=message,
                 msg_id=event.id,
                 msg_seq=event._reply_seq,

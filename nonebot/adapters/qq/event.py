@@ -375,7 +375,7 @@ class C2CMessageCreateEvent(QQMessageEvent):
     @override
     def get_event_description(self) -> str:
         return escape_tag(
-            f"Message {self.id} from {self.author.id}: {self.get_message()!r}"
+            f"Message {self.id} from {self.author.user_openid}: {self.get_message()!r}"
         )
 
 
